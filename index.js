@@ -29,7 +29,27 @@ function getLength(arr){
       
         return min;
     }
+  function getMax(arr) {
+    let max = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] > max) 
+        max = arr[i];
+      
+    }
   
+    return max;
+  }
+  function getRange(arr){
+
+    let min = getMin(arr);
+    let max = getMax(arr);
+  
+    return max - min;
+  }
+function getEvens(arr){
+  
+}
   const numbers = [1, 3, 5, 8];
 
   console.log(`You have given ${getLength(numbers)} numbers.`);
@@ -39,9 +59,12 @@ function getLength(arr){
   console.log(`The mean of your numbers is ${getMean(numbers)}.`);
 
   console.log(`The smallest of your numbers is ${getMin(numbers)}.`);
+
+  console.log(`The largest of your numbers is ${getMax(numbers)}.`);
+
+  console.log(`The range of your numbers is ${getRange(numbers)}.`);
+
+  console.log(`The even numbers you gave are ${getEvens(numbers)}.`);
   /*
-console.log(`The largest of your numbers is ${getMax(numbers)}.`);
-console.log(`The range of your numbers is ${getRange(numbers)}.`);
-console.log(`The even numbers you gave are ${getEvens(numbers)}.`);
 console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
 */
